@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../ts/bundle/casualtyBundle.js"></script>
+<body>
+<h1>故障种类预测</h1>
+<h2>模型训练：请上传工单数据文件（带故障种类标签）</h2>
+<form id="training" method="post" action="http://172.18.57.145:8080/training" enctype="multipart/form-data">
+    <input type="file" name="upload">
+    <button type="submit">发送</button>
+</form>
+
+<h2>故障原因预测：请上传工单数据文件（不带故障种类标签）</h2>
+<form id="predict" method="post" action="http://172.18.57.145:8080/predict">
+    <input type="file">
+    <button type="submit">发送</button>
+</form>
+</body>
+</html>
